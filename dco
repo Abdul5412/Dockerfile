@@ -1,0 +1,9 @@
+FROM ubuntu
+MAINTAINER abdul
+
+RUN apt-get update
+EXPOSE 80
+RUN apt-get install apache2 -y
+COPY index.html /var/www/html
+CMD ["echo","image created"] 
+
